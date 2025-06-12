@@ -17,6 +17,6 @@ class Custom_excecption(Exception):
 
 
         return f"Error in {file_name} , line {line_number} : {error_message}"
-    
+
     def __str__(self):
         return self.error_message
