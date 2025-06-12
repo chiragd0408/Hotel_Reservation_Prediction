@@ -1,5 +1,8 @@
 setup.py
 src/__init__.py
+src/custom_exception.py
+src/data_ingestion.py
+src/logger.py
 src/MLOPS_Projects_1.egg-info/PKG-INFO
 src/MLOPS_Projects_1.egg-info/SOURCES.txt
 src/MLOPS_Projects_1.egg-info/dependency_links.txt
