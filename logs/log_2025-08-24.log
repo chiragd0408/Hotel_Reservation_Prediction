@@ -1,0 +1,56 @@
+2025-08-24 23:27:04,074 - INFO - Succesfully read the YAML file
+2025-08-24 23:27:04,075 - INFO - Loading data from RAW directory
+2025-08-24 23:27:04,075 - INFO - Loading data
+2025-08-24 23:27:04,179 - INFO - Loading data
+2025-08-24 23:27:04,213 - INFO - Starting our Data Processing step
+2025-08-24 23:27:04,214 - INFO - Dropping the Columns
+2025-08-24 23:27:04,246 - ERROR - Error during processing step "['Unnamed:0'] not found in axis"
+2025-08-24 23:27:04,246 - ERROR - Error During preprocessing pipeline Error in C:\Users\Admin\Hotel_Reservation_Prediction\src\data_preprocessing.py , line 32 : Error while preprocess data
+2025-08-24 23:30:46,513 - INFO - Succesfully read the YAML file
+2025-08-24 23:30:46,513 - INFO - Loading data from RAW directory
+2025-08-24 23:30:46,513 - INFO - Loading data
+2025-08-24 23:30:46,563 - INFO - Loading data
+2025-08-24 23:30:46,577 - INFO - Starting our Data Processing step
+2025-08-24 23:30:46,577 - INFO - Dropping the Columns
+2025-08-24 23:30:46,579 - ERROR - Error during processing step "['Unnamed:0'] not found in axis"
+2025-08-24 23:30:46,579 - ERROR - Error During preprocessing pipeline Error in C:\Users\Admin\Hotel_Reservation_Prediction\src\data_preprocessing.py , line 32 : Error while preprocess data
+2025-08-24 23:32:59,418 - INFO - Succesfully read the YAML file
+2025-08-24 23:32:59,418 - INFO - Loading raw data
+2025-08-24 23:32:59,418 - INFO - Loading data
+2025-08-24 23:32:59,458 - INFO - Loading data
+2025-08-24 23:32:59,478 - INFO - Starting Data Processing step
+2025-08-24 23:32:59,510 - INFO - Dropping columns: ['Booking_ID']
+2025-08-24 23:32:59,542 - INFO - Applying Label Encoding
+2025-08-24 23:32:59,563 - INFO - Label Mappings:
+2025-08-24 23:32:59,563 - INFO - type_of_meal_plan : {'Meal Plan 1': 0, 'Meal Plan 2': 1, 'Meal Plan 3': 2, 'Not Selected': 3}
+2025-08-24 23:32:59,563 - INFO - required_car_parking_space : {0: 0, 1: 1}
+2025-08-24 23:32:59,563 - INFO - room_type_reserved : {'Room_Type 1': 0, 'Room_Type 2': 1, 'Room_Type 3': 2, 'Room_Type 4': 3, 'Room_Type 5': 4, 'Room_Type 6': 5, 'Room_Type 7': 6}
+2025-08-24 23:32:59,563 - INFO - market_segment_type : {'Aviation': 0, 'Complementary': 1, 'Corporate': 2, 'Offline': 3, 'Online': 4}
+2025-08-24 23:32:59,563 - INFO - repeated_guest : {0: 0, 1: 1}
+2025-08-24 23:32:59,563 - INFO - booking_status : {'Canceled': 0, 'Not_Canceled': 1}
+2025-08-24 23:32:59,563 - INFO - Handling Skewness
+2025-08-24 23:32:59,568 - INFO - Starting Data Processing step
+2025-08-24 23:32:59,568 - INFO - Dropping columns: ['Booking_ID']
+2025-08-24 23:32:59,572 - INFO - Applying Label Encoding
+2025-08-24 23:32:59,579 - INFO - Label Mappings:
+2025-08-24 23:32:59,579 - INFO - type_of_meal_plan : {'Meal Plan 1': 0, 'Meal Plan 2': 1, 'Meal Plan 3': 2, 'Not Selected': 3}
+2025-08-24 23:32:59,579 - INFO - required_car_parking_space : {0: 0, 1: 1}
+2025-08-24 23:32:59,579 - INFO - room_type_reserved : {'Room_Type 1': 0, 'Room_Type 2': 1, 'Room_Type 3': 2, 'Room_Type 4': 3, 'Room_Type 5': 4, 'Room_Type 6': 5, 'Room_Type 7': 6}
+2025-08-24 23:32:59,579 - INFO - market_segment_type : {'Aviation': 0, 'Complementary': 1, 'Corporate': 2, 'Offline': 3, 'Online': 4}
+2025-08-24 23:32:59,579 - INFO - repeated_guest : {0: 0, 1: 1}
+2025-08-24 23:32:59,579 - INFO - booking_status : {'Canceled': 0, 'Not_Canceled': 1}
+2025-08-24 23:32:59,579 - INFO - Handling Skewness
+2025-08-24 23:32:59,583 - INFO - Handling Imbalanced Data
+2025-08-24 23:33:02,923 - INFO - Data Balanced Successfully
+2025-08-24 23:33:02,923 - INFO - Handling Imbalanced Data
+2025-08-24 23:33:02,974 - INFO - Data Balanced Successfully
+2025-08-24 23:33:02,974 - INFO - Starting Feature Selection step
+2025-08-24 23:33:10,211 - INFO - Features Selected: ['lead_time' 'avg_price_per_room' 'no_of_special_requests' 'arrival_month'
+ 'Unnamed: 0' 'arrival_date' 'market_segment_type' 'no_of_week_nights'
+ 'no_of_weekend_nights' 'type_of_meal_plan']
+2025-08-24 23:33:10,212 - INFO - Feature Selection Completed Successfully
+2025-08-24 23:33:10,219 - INFO - Saving data to artifacts/processed\processed_train.csv
+2025-08-24 23:33:10,305 - INFO - Data saved successfully
+2025-08-24 23:33:10,305 - INFO - Saving data to artifacts/processed\processed_test.csv
+2025-08-24 23:33:10,339 - INFO - Data saved successfully
+2025-08-24 23:33:10,339 - INFO - Data processing completed successfully
