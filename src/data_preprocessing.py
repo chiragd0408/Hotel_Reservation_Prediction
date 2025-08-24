@@ -141,3 +141,6 @@ class DataProcessor:
             test_df = self.balance_data(test_df)
 
             train_df = self.select_features(train_df)
+            test_df = test_df[test_df.columns]
+
+            self.save_data(train_df)
