@@ -143,4 +143,11 @@ class DataProcessor:
             train_df = self.select_features(train_df)
             test_df = test_df[test_df.columns]
 
-            self.save_data(train_df)
+            self.save_data(train_df,PROCESSED_TRAIN_DATA)
+            self.save_data(train_df, PROCESSED_TEST_DATA)
+
+            logger.info("Data processing completed successfully")
+
+        except Exception as e:
+            logger.error(f"Error During preprocessing pipeline {e}")
+            raise CustomException("Error while data preprocessing pipeline", e)       
