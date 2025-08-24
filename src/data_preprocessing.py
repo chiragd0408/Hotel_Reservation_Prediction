@@ -80,4 +80,67 @@ class DataProcessor:
             logger.error(f"Error during balancing data step {e}")
             raise CustomException("Error while balancing data", e)
         
-    def :
+    def select_features(self,df):
+        try:
+            logger.info("Starting our features selection step")
+
+            x = df.drop(columns='bookiing_status')
+            y = df["booking_status"]
+
+            model = RandomForestClassifier(random_state=42)
+            model.fit(x,y)
+
+            feature_importance = model.feature_importances_
+            
+            feature_importances_df = pd.DataFrame({
+                'feature' : x.columns,
+                'importance' : feature_importance
+            })
+
+            top_features_importance_df = feature_importances_df.sort_values(by="importance" , ascending=False)
+
+            num_features_to_select = self.config["data_processing"]["no_of_features"]
+            
+            top_10_features = top_features_importance_df["feature"].head(10).values
+
+            logger.info(f"Features Selected : {top_10_features}")
+
+            top_10_df = df[top_10_features.tolist() + ['booking_status']]
+
+            logger.info("Feature Selection Completed Successfully")
+
+            return top_10_df
+
+        except Exception as e:
+            logger.error(f"Error during Feature Selection step {e}")
+            raise CustomException("Error while feature selection", e)  
+
+    def save_data(self,df , file_path):
+        try:
+            logger.info("Saving our data in processed folder")
+
+            df.to_csv(file_path , index=False)
+
+            logger.info(f"Data Save Successfully to {file_path}")
+
+        except Exception as e:
+            logger.error(f"Error During Saving Data Step {e}")
+            raise CustomException("Error while saving data", e) 
+
+    def process(self):
+        try:
+            logger.info("Loading data from RAW directory")
+
+            train_df = load_data(self.train_path)
+            test_df = load_data(self.test_path)
+
+            train_df = self.preprocess_data(train_df)
+            test_df = self.preprocess_data(test_df)
+
+            train_df = self.balance_data(train_df)
+            test_df = self.balance_data(test_df)
+
+            train_df = self.select_features(train_df)
+            test_df = test_df[test_df.columns]
+
+            self.save_data(train_df)
